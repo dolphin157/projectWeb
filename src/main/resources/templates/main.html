@@ -3,12 +3,451 @@
 <head>
     <meta charset="UTF-8">
     <title>한두혁 프로젝트 개요</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+
 </head>
 
 <body>
+    <div class="HomepageLayout sliding-section" id="home">
+        <div class="header-class">
+            <div>
+                <div class="header-text">
+                    <ul>
+                        <li class="header-li" onclick="slideTo('home')">홈</li>
+                        <li class="header-li" onclick="slideTo('motivation')">개발동기</li>
+                        <li class="header-li" onclick="slideTo('environment')">개발환경</li>
+                        <li class="header-li" onclick="slideTo('design')">기능 및 설계</li>
+                    </ul>
+                </div>
+            </div>
 
-안녕하세요
+        </div>
+        <div class="typer" id="h">
+            <h1 class="typer-text">Developer 한두혁의 포트폴리오입니다.</h1>
+        </div>
 
+        <script>
+            // 타이핑 애니메이션 구현
+            var typerText = document.querySelector('.typer-text');
+            var textToType = typerText.innerText;
+            typerText.innerText = '';
+
+            function typeText(index) {
+                if (index < textToType.length) {
+                    typerText.innerText += textToType.charAt(index);
+                    index++;
+                    setTimeout(function() {
+                        typeText(index);
+                    }, 100);
+                }
+            }
+
+
+            window.onload = function() {
+                typeText(0);
+            };
+        </script>
+
+        <div class="start">
+            <h1 class="start_heading sliding-section" id="motivation" >
+                 개발동기
+            </h1>
+            <div class="start_content">
+                <img src="/images/startc1.png" style="width:90%;height:700px;"/>
+                <img src="/images/startc2.png" style="width:90%;height:700px;"/>
+                <img src="/images/startc3.png" style="width:90%;height:700px;"/>
+            </div>
+        </div>
+        <div class="env">
+            <h1 class="env_heading sliding-section" id="environment">
+                 개발환경
+            </h1>
+            <div class="env_content">
+                <h2>
+                    OS
+                </h2>
+                <img src="/images/windowos.png" /> <img src="/images/macos.png" />
+
+                <h2>
+                    Frontend
+                </h2>
+
+                <img src="/images/htmlimg.png" /> <img src="/images/cssimg.png" /> <img src="/images/jsimg.png" /> <img src="/images/jqueryimg.png" />
+
+                <h2>
+                    Backend
+                </h2>
+
+                <img src="/images/javaimg.png" /> <img src="/images/springboot.png"/>
+
+                <h2>
+                    DB
+                </h2>
+
+                <img src="/images/oracle.png"/> <img src="/images/mybatis.png"/>
+
+                <h2>
+                    ETC
+                </h2>
+
+                <img src="/images/git.png" /> <img src="/images/docker.png" />
+
+            </div>
+        </div>
+        <div class="plan">
+            <h1 class="plan_heading sliding-section" id="design">
+                기능 및 설계
+            </h1>
+            <div class="projects-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front projects-item">
+                            <div class="first project-front">
+                                <!-- Front Content -->
+                            </div>
+                        </div>
+                        <div class="flip-card-back projects-item">
+
+                            <div class="back-inner detail">
+                                <h3>메인</h3>
+                                <p>크루즈 홈페이지의 메인 화면입니다.</p>
+                            </div>
+                            <div class="back-inner tech">
+                                <h4># Tech</h4>
+                                <ul class="lang">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Javascript</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front projects-item">
+                            <div class="first2 project-front">
+                                <!-- Front Content -->
+                            </div>
+                        </div>
+                        <div class="flip-card-back projects-item">
+
+                            <div class="back-inner detail">
+                                <h3>로그인</h3>
+                                <p>Security Session방식의 OAuth2로그인과 일반 로그인방식의 JWT 로그인 두가지 방식으로 로그인이 가능합니다.</p>
+                            </div>
+                            <div class="back-inner tech">
+                                <h4># Tech</h4>
+                                <ul class="lang">
+                                    <li>Spring security</li>
+                                    <li>OAuth2</li>
+                                    <li>JWT</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front projects-item">
+                            <div class="first3 project-front">
+                                <!-- Front Content -->
+                            </div>
+                        </div>
+                        <div class="flip-card-back projects-item">
+
+                            <div class="back-inner detail">
+                                <h3>회원가입</h3>
+                                <p>OAuth2회원가입과 JWT 회원가입 두가지 방식으로 회원가입이 가능합니다.</p>
+                            </div>
+                            <div class="back-inner tech">
+                                <h4># Tech</h4>
+                                <ul class="lang">
+                                    <li>Spring security</li>
+                                    <li>OAuth2</li>
+                                    <li>JWT</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front projects-item">
+                            <div class="first4 project-front">
+                                <!-- Front Content -->
+                            </div>
+                        </div>
+                        <div class="flip-card-back projects-item">
+
+                            <div class="back-inner detail">
+                                <h3>모임 만들기</h3>
+                                <p>모임을 만들고 회원 초대를 할 수 있습니다.</p>
+                            </div>
+                            <div class="back-inner tech">
+                                <h4># Tech</h4>
+                                <ul class="lang">
+                                    <li>Axios</li>
+                                    <li>Kakao API</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front projects-item">
+                            <div class="first5 project-front">
+                                <!-- Front Content -->
+                            </div>
+                        </div>
+                        <div class="flip-card-back projects-item">
+
+                            <div class="back-inner detail">
+                                <h3>모임 보기</h3>
+                                <p>내가 속한 모임과 알림을 확인할 수 있습니다.</p>
+                            </div>
+                            <div class="back-inner tech">
+                                <h4># Tech</h4>
+                                <ul class="lang">
+                                    <li>Web Socket</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front projects-item">
+                            <div class="first6 project-front">
+                                <!-- Front Content -->
+                            </div>
+                        </div>
+                        <div class="flip-card-back projects-item">
+
+                            <div class="back-inner detail">
+                                <h3>계좌 보기</h3>
+                                <p>내가 등록한 계좌를 볼 수 있습니다.</p>
+                            </div>
+                            <div class="back-inner tech">
+                                <h4># Tech</h4>
+                                <ul class="lang">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Javascript</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front projects-item">
+                            <div class="first7 project-front">
+                                <!-- Front Content -->
+                            </div>
+                        </div>
+                        <div class="flip-card-back projects-item">
+
+                            <div class="back-inner detail">
+                                <h3>일정 보기</h3>
+                                <p>나의 모든 일정을 한눈에 확인할 수 있습니다.</p>
+                            </div>
+                            <div class="back-inner tech">
+                                <h4># Tech</h4>
+                                <ul class="lang">
+                                    <li>Quartz</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front projects-item">
+                            <div class="first8 project-front">
+                                <!-- Front Content -->
+                            </div>
+                        </div>
+                        <div class="flip-card-back projects-item">
+
+                            <div class="back-inner detail">
+                                <h3>마이페이지</h3>
+                                <p>마이페이지에서 게시글과 회원정보 수정을 할 수 있습니다.</p>
+                            </div>
+                            <div class="back-inner tech">
+                                <h4># Tech</h4>
+                                <ul class="lang">
+                                    <li>MyBatis</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front projects-item">
+                            <div class="first9 project-front">
+                                <!-- Front Content -->
+                            </div>
+                        </div>
+                        <div class="flip-card-back projects-item">
+
+                            <div class="back-inner detail">
+                                <h3>모임 관리</h3>
+                                <p>모임 관리에 필요한 여러 가지 기능을 사용할 수 있습니다.</p>
+                            </div>
+                            <div class="back-inner tech">
+                                <h4># Tech</h4>
+                                <ul class="lang">
+                                    <li>Kakao API</li>
+                                    <li>HTML</li>
+                                    <li>MyBatis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front projects-item">
+                            <div class="first10 project-front">
+                                <!-- Front Content -->
+                            </div>
+                        </div>
+                        <div class="flip-card-back projects-item">
+
+                            <div class="back-inner detail">
+                                <h3>초대 수락</h3>
+                                <p>모임에 초대받은 회원은 수락과 거절을 선택할 수 있습니다.</p>
+                            </div>
+                            <div class="back-inner tech">
+                                <h4># Tech</h4>
+                                <ul class="lang">
+                                    <li>Kakao API</li>
+                                    <li>HTML</li>
+                                    <li>Javascript</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front projects-item">
+                            <div class="first11 project-front">
+                                <!-- Front Content -->
+                            </div>
+                        </div>
+                        <div class="flip-card-back projects-item">
+
+                            <div class="back-inner detail">
+                                <h3>모임 게시판</h3>
+                                <p>모임 게시판에서 여러 글들을 확인할 수 있습니다.</p>
+                            </div>
+                            <div class="back-inner tech">
+                                <h4># Tech</h4>
+                                <ul class="lang">
+                                    <li>MyBatis</li>
+                                    <li>Web Socket</li>
+                                    <li>Javascript</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front projects-item">
+                            <div class="first12 project-front">
+                                <!-- Front Content -->
+                            </div>
+                        </div>
+                        <div class="flip-card-back projects-item">
+
+                            <div class="back-inner detail">
+                                <h3>회원 관리</h3>
+                                <p>모임장은 회원 초대 및 추방을 할 수 있습니다.</p>
+                            </div>
+                            <div class="back-inner tech">
+                                <h4># Tech</h4>
+                                <ul class="lang">
+                                    <li>MyBatis</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front projects-item">
+                            <div class="first13 project-front">
+                                <!-- Front Content -->
+                            </div>
+                        </div>
+                        <div class="flip-card-back projects-item">
+
+                            <div class="back-inner detail">
+                                <h3>메세지 보내기</h3>
+                                <p>회비를 미납한 회원에게 메시지를 보낼 수 있습니다.</p>
+                            </div>
+                            <div class="back-inner tech">
+                                <h4># Tech</h4>
+                                <ul class="lang">
+                                    <li>Kakao API </li>
+                                    <li>Web Socket</li>
+                                    <li>Javascript</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+            <div>
+            <img src="/images/db.png" style="width:90%;height:700px; margin-top:50px;">
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 100px; background-color: #333; color: #fff; padding: 10px;">
+            <h1 style="font-size: 52px; font-weight: bold;">Thank you! ️</h1>
+            <p style="font-size: 26px;">Email: handoohyuck@gmail.com</p>
+        </div>
+
+    </div>
+
+
+    <script>
+        // JavaScript로 슬라이딩 효과 적용
+        function slideTo(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 
 
 </body>
