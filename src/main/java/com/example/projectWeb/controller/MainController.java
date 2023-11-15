@@ -10,6 +10,6 @@ public class MainController {
     public String mainPage() throws Exception{
 
 
-        return "main";
+        return "index";
     }
 }
