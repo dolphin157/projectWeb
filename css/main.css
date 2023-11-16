@@ -293,7 +293,7 @@ h1 {
 }
 
 .first10 {
-    background-image: url('/images/invite.png');
+    background-image: url('../images/invite.png');
     background-size: cover;
     width: 280px;
     height: 280px;
